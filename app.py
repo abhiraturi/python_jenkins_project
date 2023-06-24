@@ -5,3 +5,5 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, Docker! This is version 1'
     
+if __name__ == "__main__":
+    app.run()
