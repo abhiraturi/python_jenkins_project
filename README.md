@@ -86,25 +86,47 @@ Once u commit changes to github, you can run build again in jenkins for the new 
 ****1. Setting up Jenkins:****
 Create EC2 in AWS and perform below steps:
 
+install java:
 yum install java
+
+check java version:
 java - version
 
+install firewalld command:
 yum install firewalld
+
+start firewalld service:
 systemctl start firewalld
 
+download the jenkins repo
 sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+import the jenkins key:
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+upgrade dnf:
 sudo dnf upgrade
-sudo dnf install java-11-openjdk
+
+iinstall jenkins:
 sudo dnf install jenkins
+
+enable jenkins:
 sudo systemctl enable jenkins
+
+start jenkins:
 sudo systemctl start jenkins
+
+check jenkins status:
 systemctl status jenkins
 
+allow/enable port to linux firewall
 firewall-cmd --add-port=8080/tcp --permanent
+
+reload firewall:
 firewall-cmd --reload
+
+list firewall ports that are enabled:
 firewall-cmd --list-all
-systemctl start jenkins
 
 Access the web UI:
 password is located at:
@@ -112,7 +134,10 @@ cat /var/lib/jenkins/secrets/initialAdminPassword
 
 
 **2. Install git on Jenkins server and install plugin on UI**
+install git:
 yum install git
+
+check git version:
 git version
 
 
