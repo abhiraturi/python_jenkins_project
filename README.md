@@ -78,8 +78,9 @@ Once u commit changes to github, you can run build again in jenkins for the new 
 
 
 
-==============================================================================================================
-**Devops Project with GitHub and Jenkins on Linux instance:******
+====================================================================================
+
+**Devops Project with GitHub and Jenkins on Linux instance:**
 
 
 ****1. Setting up Jenkins:****
