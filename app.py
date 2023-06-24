@@ -6,4 +6,4 @@ def hello_world():
     return 'Hello, Docker! This is version 1'
     
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='13.232.56.25', port=5000)
